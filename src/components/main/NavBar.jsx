@@ -59,14 +59,14 @@ const NavBar = () => {
 
     return (
         <aside className="">
-            <nav className="w-full h-screen bg-[#0A194E] pt-7 pl-7">
-                <div className="logo  flex items-center justify-between ">
+            <nav className=" fixed h-full bg-[#0A194E] pr-[7rem] pt-7 pl-7 top-0 z-[100]">
+                <div className="bg-[#51CBFF] rounded-[50%] p-3 flex relative left-5 hidden -top-4 cursor-pointer text-[#0A194E] text-[1.8rem]">
+                    <i className="fa-solid fa-bars-staggered"></i>
+                </div>
+                <div className="logo  flex items-center justify-between mt-5 ">
                     <div className="flex gap-2 items-center mb-7 ">
                         <img src="assets/logo.svg" alt="logo" />
                         <h3 className="text-white">Trends</h3>
-                    </div>
-                    <div className="bg-[#51CBFF] rounded-[50%] p-3 flex relative left-5 -top-4 cursor-pointer text-[#0A194E] text-[1.8rem]">
-                        <i className="fa-solid fa-bars-staggered"></i>
                     </div>
                 </div>
                 <h3>Main Menu</h3>
