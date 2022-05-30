@@ -104,7 +104,7 @@ const Project = () => {
                     <p>{description}</p>
                     <p>{position}</p>
                     <button
-                        className="border-[#0A194E] border-2 w-[100%] sm:w-[60%] p-3 mt-2 rounded-xl hover:bg-[#0088FE] hover:text-white transition-all duration-500">{btn}</button>
+                        className={`border-[#0A194E] border-2 w-[100%] sm:w-[60%] p-3 mt-2 rounded-xl hover:bg-[#0088FE] hover:text-white transition-all duration-500 ${btn === 'completed' ? 'bg-[#FFAC33] text-white' : 'bg-transparent'}`}>{btn}</button>
                     <button type="button" onClick={() => handleDelete(id)}><p><i className="text-[red] fa-solid fa-trash-can"></i></p></button>
                 </div>
             })}

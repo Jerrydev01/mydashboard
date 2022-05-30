@@ -22,23 +22,25 @@ export default class Example extends PureComponent {
                         <button className="shadow-sm hover:shadow-md rounded-sm px-6 py-4 text-[1.4rem] hover:text-[#00C49F]">View stats</button>
                     </div>
                 </div>
-                <PieChart width={300} height={300} onMouseEnter={this.onPieEnter}>
-                    <Pie
-                        data={data}
-                        cx={120}
-                        cy={200}
-                        innerRadius={60}
-                        outerRadius={80}
-                        fill="#8884d8"
-                        paddingAngle={5}
-                        dataKey="value"
-                    >
-                        {data.map((entry, index) => (
-                            <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                        ))}
-                    </Pie>
-                    <Tooltip />
-                </PieChart>
+                <div className="ml-20">
+                    <PieChart width={300} height={300} onMouseEnter={this.onPieEnter}>
+                        <Pie
+                            data={data}
+                            cx={120}
+                            cy={200}
+                            innerRadius={60}
+                            outerRadius={80}
+                            fill="#8884d8"
+                            paddingAngle={5}
+                            dataKey="value"
+                        >
+                            {data.map((entry, index) => (
+                                <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                            ))}
+                        </Pie>
+                        <Tooltip />
+                    </PieChart>
+                </div>
                 <div className="flex gap-6 text-center">
                     <div className="">
                         <p><i className="text-[#0088FE] fa-solid fa-circle"></i> <strong>Morning</strong></p>
