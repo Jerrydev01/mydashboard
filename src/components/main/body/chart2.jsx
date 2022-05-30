@@ -22,7 +22,7 @@ export default class Example extends PureComponent {
                         <button className="shadow-sm hover:shadow-md rounded-sm px-6 py-4 text-[1.4rem] hover:text-[#00C49F]">View stats</button>
                     </div>
                 </div>
-                <div className="ml-20">
+                <div className="">
                     <PieChart width={300} height={300} onMouseEnter={this.onPieEnter}>
                         <Pie
                             data={data}
