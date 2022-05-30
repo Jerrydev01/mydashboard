@@ -55,12 +55,12 @@ const chart = () => {
     ];
 
     const renderLineChart = (
-        <div id="container" className="mr-7">
+        <div id="container">
 
             <ResponsiveContainer >
 
                 <AreaChart data={data}
-                    margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
+                    margin={{ top: 10, right: 60, left: 0, bottom: 0 }}>
                     <defs>
                         <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
                             <stop offset="5%" stopColor="#FFBB28" stopOpacity={0.8} />
