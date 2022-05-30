@@ -55,7 +55,7 @@ const chart = () => {
     ];
 
     const renderLineChart = (
-        <div id="container">
+        <div id="container" className="mr-7">
 
             <ResponsiveContainer >
 
