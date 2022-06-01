@@ -1,7 +1,7 @@
 import React from 'react'
 import CoinDash from './CoinDash'
 
-import Chart from './chart'
+import Chart from './Chart'
 
 
 
