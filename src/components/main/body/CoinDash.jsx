@@ -16,7 +16,7 @@ const CoinDash = () => {
     }, []);
 
     return (
-        <div className="flex mt-7 pl-[4rem] items-center gap-7">
+        <div className="flex mt-7 pl-[1rem] sm:pl-[4rem] items-center gap-7">
             {coinDash.map((coin) => {
                 const { id, name, current_price, image, price_change_percentage_24h } = coin;
                 return <div className="">

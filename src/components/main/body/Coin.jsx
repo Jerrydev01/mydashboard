@@ -2,8 +2,8 @@ import React from 'react'
 
 const Coin = ({ image, name, price, percentageChange }) => {
     return (
-        <div className="flex gap-6">
-            <img className="w-28 object-contain" src={image} alt="" />
+        <div className="flex gap-2 sm-gab-6">
+            <img className="w-16 sm:w-28 m-auto object-contain" src={image} alt="" />
             <div>
                 <p className="text-[#A9ABB0]">{name}</p>
                 <h4 className="text-[#0A194E]">{price}</h4>

@@ -75,9 +75,31 @@ h5 {
   height: 300px;
   background-color: #fff;
 }
+/* mobile view */
 @media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 3.2rem;
+  }
+
+  h2 {
+    font-size: 2.4rem;
+  }
+  h3 {
+    font-size: 2rem;
+    color: #51cbff;
+  }
+  h4 {
+    font-size: 1.7rem;
+  }
+  h5 {
+    font-size: 1.4rem;
+  }
+  p {
+    font-size: 1.6rem;
+  }
+
   #container {
-    width: 100%;
+    width: 90%;
   }
 }
 

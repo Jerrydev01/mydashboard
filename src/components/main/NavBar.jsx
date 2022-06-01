@@ -64,11 +64,11 @@ const NavBar = () => {
 
 
     return (
-        <aside className="relative">
-            <div onClick={toggle} className="bg-[#51CBFF] rounded-[50%] p-3 left-5  top-[2.5rem] cursor-pointer text-[#0A194E] text-[1.8rem] lg:hidden z-[100] fixed w-[4rem]">
-                <i className={`ml-2 rotate-180 ${open ? 'fa-solid fa-xmark' : 'fa-solid fa-bars-staggered '}`}></i>
+        <aside onclick={toggle} onBlur={hide} onFocus={show} className="fixed lg:relative z-[1000]">
+            <div onClick={toggle} className="bg-[#51CBFF] rounded-[50%] p-3 left-5  top-[2.5rem] cursor-pointer text-[#0A194E] text-[1.8rem] lg:hidden z-[1000] relative w-[4rem]">
+                <i className={`ml-2 rotate-180 z-[1000] ${open ? 'fa-solid fa-xmark' : 'fa-solid fa-bars-staggered '}`}></i>
             </div>
-            <nav onclick={toggle} onBlur={hide} onFocus={show} className={`  lg:fixed absolute transition-all lg:transition-none duration-500 h-screen bg-[#0A194E] pr-[7rem] mt-[6rem] lg:mt-0 pt-7 pl-7 top-0 z-[10] lg:z-[100] ${open ? 'top-[1.7rem] lg:top-0' : 'left-[-100%] lg:left-0'}`}>
+            <nav onclick={toggle} onBlur={hide} onFocus={show} className={`  lg:fixed absolute transition-all lg:transition-none duration-500 h-screen bg-[#0A194E] pr-[7rem] mt-[6rem] lg:mt-0 pt-7 pl-7 top-0 z-[100] lg:z-[1000] ${open ? 'top-[1.7rem] lg:top-0' : 'left-[-1000rem] lg:left-0'}`}>
 
                 <div className="logo  flex items-center justify-between mt-5 ">
                     <div className="flex gap-2 items-center mb-7 ">
