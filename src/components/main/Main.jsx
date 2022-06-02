@@ -16,7 +16,7 @@ const Main = () => {
             <div className="grid grid-cols-[1fr] lg:grid-cols-[20rem,1fr] w-full justify-between">
                 <NavBar />
                 <TopNav />
-                <div className="grid xl:grid-cols-[2fr,1fr] sm:grid-cols-[1fr,1fr] md:w-[90%] justify-between items-center m-auto my-[2rem] ">
+                <div className="grid xl:grid-cols-[2fr,1fr] sm:grid-cols-[1fr,1fr] md:w-[90%] xl:gap-5 justify-between items-center m-auto my-[2rem] ">
                     <div className=" sm:col-span-2 xl:col-span-1"><ChartPrimary /></div>
                     <div className=" w-full hover:shadow-md hover:rounded-[1rem] mt-[9rem]">
                         <Chart2 />
