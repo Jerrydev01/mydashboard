@@ -1,94 +1,61 @@
 import React from 'react'
+import { Bar, Line } from 'react-chartjs-2'
+import { Chart as ChartJS, registerables } from 'chart.js';
+ChartJS.register(...registerables);
 
-import { CartesianGrid, XAxis, YAxis, Tooltip, Area, AreaChart, ResponsiveContainer } from 'recharts';
+export const options = {
+    responsive: true,
+    plugins: {
+        legend: {
+            position: 'top',
+        },
+        title: {
+            display: true,
+            text: 'COIN TRADE',
+        },
+    },
+};
 
-const chart = () => {
-    const data = [
-        {
-            "name": "Jan",
-            "uv": 4000,
-            "pv": 2400,
-            "amt": 2400
-        },
-        {
-            "name": "Feb",
-            "uv": 3000,
-            "pv": 1398,
-            "amt": 2210
-        },
-        {
-            "name": "Mar",
-            "uv": 4000,
-            "pv": 1398,
-            "amt": 3210
-        },
-        {
-            "name": "April",
-            "uv": 2000,
-            "pv": 9800,
-            "amt": 2290
-        },
-        {
-            "name": "May",
-            "uv": 2780,
-            "pv": 3908,
-            "amt": 2000
-        },
-        {
-            "name": "Aug",
-            "uv": 1890,
-            "pv": 4800,
-            "amt": 2181
-        },
-        {
-            "name": "Nov",
-            "uv": 2390,
-            "pv": 3800,
-            "amt": 2500
-        },
-        {
-            "name": "Dec",
-            "uv": 3490,
-            "pv": 4300,
-            "amt": 2100
-        }
-    ];
 
-    const renderLineChart = (
-        <div id="container">
-
-            <ResponsiveContainer >
-
-                <AreaChart data={data}
-                    margin={{ top: 10, right: 60, left: 0, bottom: 0 }}>
-                    <defs>
-                        <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-                            <stop offset="5%" stopColor="#FFBB28" stopOpacity={0.8} />
-                            <stop offset="95%" stopColor="#FFBB28" stopOpacity={0} />
-                        </linearGradient>
-                        <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
-                            <stop offset="5%" stopColor="#0088FE" stopOpacity={0.8} />
-                            <stop offset="95%" stopColor="##0088FE" stopOpacity={0} />
-                        </linearGradient>
-                    </defs>
-                    <XAxis dataKey="name" />
-                    <YAxis />
-                    <CartesianGrid strokeDasharray="3 3" />
-                    <Tooltip />
-                    <Area type="monotone" dataKey="uv" stroke="#8884d8" fillOpacity={1} fill="url(#colorUv)" />
-                    <Area type="monotone" dataKey="pv" stroke="#82ca9d" fillOpacity={1} fill="url(#colorPv)" />
-                </AreaChart>
-            </ResponsiveContainer>
-        </div>
-    );
+const BarChart = () => {
     return (
-        <>
-            <h3 className="ml-4 py-7 pl-[4rem]">Past Trade Activity</h3>
-            <div>{renderLineChart}</div></>
+        <div>
+            <Bar
+                options={options}
+                datasetIdKey='id'
+                data={{
+                    labels: ['Feb', 'Mar', 'Apr', 'Jun', 'Aug', 'Sep', 'Nov', 'Dec'],
+                    datasets:
+                        [{
+                            label: 'Amount($) of trades',
+                            data: [1000, 590, 300, 500, 200, 400, 700, 500, 70],
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0.8)',
+                                'rgba(54, 162, 235, 0.5)',
+                                'rgba(255, 206, 86, 0.6)',
+                                'rgba(75, 192, 192, 0.4)',
+                                'rgba(15, 102, 255, 0.6)',
+                                'rgba(125, 14, 25, 0.6)',
+                                'rgba(23, 12, 255, 0.6)',
+                                'rgba(255, 159, 64, 0.7)'
+                            ],
+                            borderColor: [
+                                'rgba(255,99,132,1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(75, 192, 192, 1)',
+                                'rgba(153, 102, 255, 1)',
+                                'rgba(255, 159, 64, 1)'
+                            ],
+                            borderWidth: 1
+                        }]
+
+                }}
+
+
+            />
+        </div>
     )
 }
 
-export default chart
-
-
-
+export default BarChart
