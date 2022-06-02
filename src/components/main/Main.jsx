@@ -1,10 +1,10 @@
-import React from 'react'
-import NavBar from './NavBar'
-import ChartPrimary from './body/ChartPrimary'
-import Weather from './body/Weather'
-import TopNav from './TopNav'
-import Project from './body/Project'
-import Chart2 from './body/Chart2'
+import React from 'react';
+import NavBar from './NavBar';
+import ChartPrimary from './body/ChartPrimary';
+import Weather from './body/Weather';
+import TopNav from './TopNav';
+import Project from './body/Project';
+import Chart2 from './Chart2';
 
 const Main = () => {
 
