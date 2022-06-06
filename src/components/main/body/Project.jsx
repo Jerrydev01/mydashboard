@@ -99,7 +99,7 @@ const Project = () => {
 
             {filterProjectList.map((list) => {
                 const { Activity, description, position, btn, id } = list;
-                return <div key={id} className="grid-project items-center sm:pr-10 text-[#333232]">
+                return <div key={id} className="grid-project items-center sm:pr-10 ">
                     <p><strong>{Activity}</strong></p>
                     <p>{description}</p>
                     <p>{position}</p>

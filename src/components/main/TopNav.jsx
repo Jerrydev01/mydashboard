@@ -2,9 +2,9 @@ import React from 'react'
 
 
 /* top NavBar section that houses the avatar, theme pallette and so on*/
-const TopNav = () => {
+const TopNav = ({ children }) => {
     return (
-        <div className=" flex  h-fit border items-center pl-10 pr-10 pt-7 pb-3 text-[#1C1F37] shadow-md w-full justify-end sm:justify-between fixed top-0 z-50 bg-white">
+        <div className="flex  h-fit border items-center pl-10 pr-10 pt-7 pb-3 shadow-md w-full justify-end sm:justify-between fixed top-0 z-50 ">
             <h2 className="xl:ml-[20%]  lg:ml-[25%] hidden sm:block sm:ml-20">Dashboard</h2>
             <div className="flex items-center text-[2.5rem] gap-7 transition-all duration-600 cursor-pointer relative right-0">
                 <i className="fa-solid fa-magnifying-glass hover:text-[#51CBFF]"></i>
@@ -17,7 +17,10 @@ const TopNav = () => {
                         src="assets/avatar.svg" alt="avatar" />
                     <p><strong>jerrydev</strong></p>
                 </div>
-                <i className="fa-solid fa-palette hover:text-[#51CBFF]"></i>
+                <div className="flex justify-center pl-[2rem]">
+                    {children}
+                </div>
+
             </div>
         </div>
     )

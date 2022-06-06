@@ -10,7 +10,7 @@ const ChartPrimary = () => {
 
     return (
         <div className="w-[100%] ">
-            <div className=" mt-[9rem] bg-white">
+            <div className=" mt-[12rem] ">
                 <div className="hover:shadow-md hover:rounded-[1rem]">
                     <CoinDash />
                     <Chart />
